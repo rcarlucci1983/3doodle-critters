@@ -1,0 +1,13 @@
+# Filament Wonder
+
+## A Design Philosophy
+
+In the space where molten plastic becomes imagination, there exists a visual language of continuous line and joyful accumulation. Filament Wonder celebrates the aesthetic of creation-in-motion—the looping, spiraling, layered mark-making that transforms raw material into dimensional form. This philosophy embraces the tension between control and spontaneity, where each strand follows intention yet retains the organic tremor of the human hand. Every composition must appear meticulously crafted, the product of countless hours of painstaking attention, as if a master artisan labored over each curve and connection.
+
+Color operates not as decoration but as emotional geography. Vibrant hues cluster and flow like thermal maps of creative energy—warm zones of magenta and coral bleeding into cool territories of cyan and violet. The palette pulses with the exuberance of pure making, unapologetic in its saturation. Chromatic transitions occur through deliberate gradients and bold juxtapositions, creating depth through layered transparency. The color work must demonstrate expert-level calibration, each tone selected with the precision of someone at the absolute top of their field.
+
+Form language draws from the vocabulary of extrusion: continuous paths that loop back upon themselves, building density through repetition. Geometric shapes emerge from accumulated gesture—circles from spirals, planes from hatched lines, volume from patient layering. Negative space breathes between these accumulations, providing visual rest and emphasizing the handmade quality of each mark. The composition rewards sustained viewing, revealing new details with each examination, demonstrating the painstaking craftsmanship invested in every element.
+
+Typography integrates as dimensional object rather than flat inscription. Letters may appear constructed from the same continuous-line logic as the surrounding forms, or stand in clean contrast as precise anchors amid organic flow. Text remains sparse—essential words only—functioning as visual punctuation within the larger chromatic and formal symphony. Every letterform placement reflects hours of refinement, positioned with the care of a master typographer.
+
+The resulting artifact should feel simultaneously childlike in its joy and sophisticated in its execution—proof that wonder and expertise are not opposites but collaborators. This is art that celebrates making itself, where process becomes visible poetry and every element speaks to the deep satisfaction of transforming nothing into something through patient, skilled attention.

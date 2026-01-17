@@ -1,0 +1,77 @@
+{
+  "items": [
+    {
+      "id": "23aeb2c8",
+      "title": "Football",
+      "description": "A brown, rectangular-ish 3-D printed football.",
+      "price": 2.0,
+      "image": "creature_01.png",
+      "sold": false
+    },
+    {
+      "id": "2c331223",
+      "title": "Sea Horse",
+      "description": "flat and colorful sea horse",
+      "price": 3.0,
+      "image": "creature_02.png",
+      "sold": false
+    },
+    {
+      "id": "23926ef0",
+      "title": "turtle",
+      "description": "cute and flat turtle with paper shell",
+      "price": 3.0,
+      "image": "creature_03.png",
+      "sold": false
+    },
+    {
+      "id": "94f16058",
+      "title": "Bumble Bee",
+      "description": "small bee with wings and a stinger",
+      "price": 1.0,
+      "image": "creature_05.png",
+      "sold": false
+    },
+    {
+      "id": "8b17cead",
+      "title": "kitty rainbow",
+      "description": "rainbow with kitty ears and kitty face",
+      "price": 3.0,
+      "image": "creature_06.png",
+      "sold": false
+    },
+    {
+      "id": "877c1ad8",
+      "title": "Dog",
+      "description": "cute little dog head",
+      "price": 3.0,
+      "image": "creature_07.png",
+      "sold": false
+    },
+    {
+      "id": "2769c698",
+      "title": "buterfly",
+      "description": "pretty winged butterfly",
+      "price": 5.0,
+      "image": "creature_08.png",
+      "sold": false
+    },
+    {
+      "id": "3726a903",
+      "title": "snake",
+      "description": "2 colored snake",
+      "price": 2.0,
+      "image": "creature_09.png",
+      "sold": false
+    },
+    {
+      "id": "71248c86",
+      "title": "flower",
+      "description": "colorful flower with a stem",
+      "price": 1.0,
+      "image": "creature_10.png",
+      "sold": false
+    }
+  ],
+  "google_drive_folder_id": "1zl4rGqdhfuJlBNBaDyHqAyE_HfDLJZU2"
+}
