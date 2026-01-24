@@ -11,28 +11,38 @@ FONTS_DIR = r"C:\Users\richa\.claude\skills\canvas-design\canvas-fonts"
 WIDTH = 1275  # 8.5 inches
 HEIGHT = 1650  # 11 inches
 
-# Color palette - vibrant purple, teal, pink, yellow
+# Color palette - yellow, blue, purple
 PURPLE = (155, 89, 182)
 PURPLE_DARK = (125, 60, 152)
-TEAL = (26, 188, 156)
-TEAL_DARK = (22, 160, 133)
-PINK = (255, 107, 157)
-PINK_LIGHT = (255, 184, 208)
+BLUE = (52, 152, 219)
+BLUE_DARK = (41, 128, 185)
 YELLOW = (255, 220, 80)
 YELLOW_LIGHT = (255, 240, 150)
+YELLOW_DARK = (230, 190, 50)
 CREAM = (255, 249, 245)
 WHITE = (255, 255, 255)
 
 def create_gradient_background(draw, width, height):
-    """Create a purple gradient background"""
-    # Purple gradient from lighter at top to darker at bottom
-    PURPLE_TOP = (180, 120, 210)  # Lighter purple
-    PURPLE_BOTTOM = (100, 50, 140)  # Darker purple
+    """Create a yellow to blue to purple gradient background"""
+    # Three-color gradient: yellow (top) -> blue (middle) -> purple (bottom)
+    YELLOW_TOP = (255, 220, 80)
+    BLUE_MID = (52, 152, 219)
+    PURPLE_BOTTOM = (125, 60, 152)
+
     for y in range(height):
         ratio = y / height
-        r = int(PURPLE_TOP[0] * (1 - ratio) + PURPLE_BOTTOM[0] * ratio)
-        g = int(PURPLE_TOP[1] * (1 - ratio) + PURPLE_BOTTOM[1] * ratio)
-        b = int(PURPLE_TOP[2] * (1 - ratio) + PURPLE_BOTTOM[2] * ratio)
+        if ratio < 0.5:
+            # Yellow to blue (top half)
+            local_ratio = ratio * 2
+            r = int(YELLOW_TOP[0] * (1 - local_ratio) + BLUE_MID[0] * local_ratio)
+            g = int(YELLOW_TOP[1] * (1 - local_ratio) + BLUE_MID[1] * local_ratio)
+            b = int(YELLOW_TOP[2] * (1 - local_ratio) + BLUE_MID[2] * local_ratio)
+        else:
+            # Blue to purple (bottom half)
+            local_ratio = (ratio - 0.5) * 2
+            r = int(BLUE_MID[0] * (1 - local_ratio) + PURPLE_BOTTOM[0] * local_ratio)
+            g = int(BLUE_MID[1] * (1 - local_ratio) + PURPLE_BOTTOM[1] * local_ratio)
+            b = int(BLUE_MID[2] * (1 - local_ratio) + PURPLE_BOTTOM[2] * local_ratio)
         draw.line([(0, y), (width, y)], fill=(r, g, b))
 
 def draw_doodle_line(draw, start_x, start_y, length, angle, color, thickness=4):
@@ -204,18 +214,18 @@ def main():
         font_url = font_title
 
     # Decorative corner elements
-    draw_spiral(draw, 80, 80, 60, YELLOW, 3)
-    draw_spiral(draw, WIDTH - 80, 80, 60, PINK, 3)
-    draw_spiral(draw, 80, HEIGHT - 80, 60, PINK, 3)
-    draw_spiral(draw, WIDTH - 80, HEIGHT - 80, 60, YELLOW, 3)
+    draw_spiral(draw, 80, 80, 60, PURPLE, 3)
+    draw_spiral(draw, WIDTH - 80, 80, 60, BLUE, 3)
+    draw_spiral(draw, 80, HEIGHT - 80, 60, YELLOW_LIGHT, 3)
+    draw_spiral(draw, WIDTH - 80, HEIGHT - 80, 60, YELLOW_LIGHT, 3)
 
     # Additional decorative doodle lines around edges
     for i in range(5):
-        draw_doodle_line(draw, 30 + i * 250, 140, 80, 90, TEAL, 3)
+        draw_doodle_line(draw, 30 + i * 250, 140, 80, 90, PURPLE, 3)
 
     # Header section with loopy border
     header_y = 180
-    draw_loopy_border(draw, 100, header_y - 30, WIDTH - 100, header_y + 200, YELLOW, 18)
+    draw_loopy_border(draw, 100, header_y - 30, WIDTH - 100, header_y + 200, PURPLE, 18)
 
     # Title: 3Doodle Critters
     title = "3Doodle Critters"
@@ -233,7 +243,7 @@ def main():
     tagline_bbox = draw.textbbox((0, 0), tagline, font=font_tagline)
     tagline_width = tagline_bbox[2] - tagline_bbox[0]
     tagline_x = (WIDTH - tagline_width) // 2
-    draw.text((tagline_x, header_y + 160), tagline, font=font_tagline, fill=PINK_LIGHT)
+    draw.text((tagline_x, header_y + 160), tagline, font=font_tagline, fill=PURPLE_DARK)
 
     # Info section
     info_y = 500
@@ -249,7 +259,7 @@ def main():
     draw.rounded_rectangle(
         [price_x - bubble_padding, info_y - 15,
          price_x + price_width + bubble_padding, info_y + 70],
-        radius=35, fill=TEAL, outline=TEAL_DARK, width=3
+        radius=35, fill=BLUE, outline=BLUE_DARK, width=3
     )
     draw.text((price_x, info_y), price_text, font=font_price, fill=WHITE)
 
@@ -267,7 +277,7 @@ def main():
         desc_x = (WIDTH - desc_width) // 2
 
         # Bullet point
-        bullet_colors = [PINK, TEAL, YELLOW]
+        bullet_colors = [YELLOW, BLUE, PURPLE]
         draw.ellipse([desc_x - 30, desc_y + i * 55 + 10, desc_x - 15, desc_y + i * 55 + 25],
                      fill=bullet_colors[i])
         draw.text((desc_x, desc_y + i * 55), desc, font=font_body, fill=WHITE)
@@ -279,7 +289,7 @@ def main():
     order_bbox = draw.textbbox((0, 0), order_title, font=font_body_bold)
     order_width = order_bbox[2] - order_bbox[0]
     order_x = (WIDTH - order_width) // 2
-    draw.text((order_x, order_y + 20), order_title, font=font_body_bold, fill=YELLOW)
+    draw.text((order_x, order_y + 20), order_title, font=font_body_bold, fill=YELLOW_LIGHT)
 
     order_methods = [
         "Local pickup only",
@@ -308,7 +318,7 @@ def main():
     )
 
     # Generate and paste QR code
-    qr_img = create_qr_code("https://rcarlucci1983.github.io/3doodle-critters", qr_size)
+    qr_img = create_qr_code("https://3doodlecritters.com", qr_size)
     img.paste(qr_img, (qr_x, qr_y), qr_img if qr_img.mode == 'RGBA' else None)
 
     # Scan prompt
@@ -316,7 +326,7 @@ def main():
     scan_bbox = draw.textbbox((0, 0), scan_text, font=font_body)
     scan_width = scan_bbox[2] - scan_bbox[0]
     scan_x = (WIDTH - scan_width) // 2
-    draw.text((scan_x, qr_y + qr_size + 35), scan_text, font=font_body, fill=PINK_LIGHT)
+    draw.text((scan_x, qr_y + qr_size + 35), scan_text, font=font_body, fill=YELLOW_LIGHT)
 
     # Save the flyer
     output_path = os.path.join(SCRIPT_DIR, "3doodle-critters-flyer.png")
