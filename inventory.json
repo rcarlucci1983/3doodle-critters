@@ -11,7 +11,7 @@
     {
       "id": "2c331223",
       "title": "Sea Horse",
-      "description": "flat and colorful sea horse",
+      "description": "flat and colorful sea horse\n\n[custum color]",
       "price": 3.0,
       "image": "creature_02.png",
       "sold": false
@@ -51,7 +51,7 @@
     {
       "id": "2769c698",
       "title": "buterfly",
-      "description": "pretty winged butterfly",
+      "description": "pretty winged butterfly\n\n[custum color]",
       "price": 5.0,
       "image": "creature_08.png",
       "sold": false
@@ -59,7 +59,7 @@
     {
       "id": "3726a903",
       "title": "snake",
-      "description": "2 colored snake",
+      "description": "2 colored snake\n\n[custum color]",
       "price": 2.0,
       "image": "creature_09.png",
       "sold": false
@@ -67,7 +67,7 @@
     {
       "id": "71248c86",
       "title": "flower",
-      "description": "colorful flower with a stem",
+      "description": "colorful flower with a stem\n\n[ custum color for pedles]",
       "price": 1.0,
       "image": "creature_10.png",
       "sold": false
