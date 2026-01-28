@@ -11,7 +11,7 @@
     {
       "id": "2c331223",
       "title": "Sea Horse",
-      "description": "flat and colorful sea horse\n\n[custum color]",
+      "description": "flat and colorful sea horse\ncustum\n\n[custum color]",
       "price": 3.0,
       "image": "creature_02.png",
       "sold": false
